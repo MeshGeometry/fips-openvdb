@@ -9,11 +9,12 @@ endif()
 
 set(FIPS_EXCEPTIONS ON CACHE BOOL "Enable C++ exceptions" FORCE)
 set(FIPS_RTTI  ON CACHE BOOL "Enable C++ RTTI" FORCE)
-set(ENABLE_PRECOMPILED_HEADERS  OFF CACHE BOOL "Enable precompiled headers" FORCE)
+
+option(ENABLE_PRECOMPILED_HEADERS        "Enable precompiled headers"    OFF)
+option(OPENVDB_BUILD_PYTHON_MODULE        "build python module"    OFF)
 
 list(APPEND CMAKE_MODULE_PATH "openvdb/cmake/")
 fips_add_subdirectory(openvdb/)
-
 fips_libs(openvdb_static Boost::iostreams Boost::system)
 
 
