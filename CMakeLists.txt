@@ -11,6 +11,7 @@ set(FIPS_EXCEPTIONS ON CACHE BOOL "Enable C++ exceptions" FORCE)
 set(FIPS_RTTI  ON CACHE BOOL "Enable C++ RTTI" FORCE)
 
 option(ENABLE_PRECOMPILED_HEADERS        "Enable precompiled headers"    OFF)
+option(CMAKE_NO_SYSTEM_FROM_IMPORTED        "stlib bug"    ON)
 option(OPENVDB_BUILD_PYTHON_MODULE        "build python module"    OFF)
 
 list(APPEND CMAKE_MODULE_PATH "openvdb/cmake/")
